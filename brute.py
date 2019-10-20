@@ -6,8 +6,8 @@ import sys
 
 #We import the incrementalNumber function, which is the only one that we need in dec.py
 from dec import incrementalNumber
-
 from alpha import incrementalChar
+from ascii import incrementalASCII
 
 #If there is not exactly 3 arguments, we stop the program. The first argument is the name of the script, the others are the alphabet used and the cipheredtext
 if(len(sys.argv) != 3):
@@ -16,7 +16,7 @@ if(len(sys.argv) != 3):
 #If there is 3 arguments, we continue the execution. We display the arguments given, for troubleshooting purposes more than anything else
 else:
     print("Alphabet chosen : ", sys.argv[1])
-    print("The original ciphered text found is : ", sys.argv[2])
+    print("The original ciphered text given is : ", sys.argv[2])
 
 #We set local variables instead of using the sys.argv array, to make it easier to read. It would be more memory efficient to use sys.argv but the overhead is minimal.
 alphabet = sys.argv[1]
@@ -29,7 +29,8 @@ if(alphabet == "dec"):
 elif(alphabet == "alpha"):
     incrementalChar(ciphertext)
 elif(alphabet == "all"):
-    sys.exit()
+    incrementalASCII(ciphertext)
+    
 else:
     sys.exit("Wrong alphabet given ! Alphabets include dec, alpha, all")
         
