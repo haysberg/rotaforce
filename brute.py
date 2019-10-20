@@ -7,6 +7,7 @@ import sys
 #We import the incrementalNumber function, which is the only one that we need in dec.py
 from dec import incrementalNumber
 
+from alpha import incrementalChar
 
 #If there is not exactly 3 arguments, we stop the program. The first argument is the name of the script, the others are the alphabet used and the cipheredtext
 if(len(sys.argv) != 3):
@@ -26,7 +27,7 @@ if(alphabet == "dec"):
     print('The 10 different combinations are : ')
     incrementalNumber(ciphertext)
 elif(alphabet == "alpha"):
-    sys.exit()
+    incrementalChar(ciphertext)
 elif(alphabet == "all"):
     sys.exit()
 else:
