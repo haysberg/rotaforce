@@ -18,7 +18,8 @@ def incrementIntArray(intArray, value):
     for a in intArray :
         res.append((a + value) % 10)
     #We print the result, and add a second argument to print() in order to avoid the numbers to be printed one by line. We want a line to equal a result.
-    print(res, end='')
+    for i in res :
+        print(i, end='')
 
 
 #This is the function called in our brute.py file, so it is used to call all the other functions.
@@ -28,7 +29,7 @@ def incrementalNumber(numberString):
     integerArray = stringToIntegerArray(numberString)
 
     #We add numbers to the array, from 0 to 9. The incrementIntArray will give us the results in the terminal.
-    for i in range(9):
+    for i in range(10):
         incrementIntArray(integerArray, i)
         #When we have a new possible plaintext calculated, we return to the line for more visibility
         print('')
