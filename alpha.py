@@ -19,8 +19,6 @@ def incrementCharArray(charArray, value):
 #This is the function called in our brute.py file, so it is used to call all the other functions.
 #This is why it is declared last, because it uses the function declared previously.
 def incrementalChar(charString):
-    #We convert the array given by the user in an integer array
-    #integerArray = stringToIntegerArray(numberString)
 
     #We add numbers to the array, from 0 to 9. The incrementIntArray will give us the results in the terminal.
     for i in range(ord('a'), ord('z')):
