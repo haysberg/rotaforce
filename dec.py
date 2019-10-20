@@ -29,7 +29,7 @@ def incrementalNumber(numberString):
     integerArray = stringToIntegerArray(numberString)
 
     #We add numbers to the array, from 0 to 9. The incrementIntArray will give us the results in the terminal.
-    for i in range(9):
+    for i in range(10):
         incrementIntArray(integerArray, i)
         #When we have a new possible plaintext calculated, we return to the line for more visibility
         print('')
