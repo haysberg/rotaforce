@@ -7,7 +7,10 @@ def incrementCharArray(charArray, value):
     #We use a modulo because we don't want any character ASCII code be greater than 122.
     #It should go back to 97 instead, which is the ASCII code for the letter A.
     for a in charArray :
-        res.append(chr( (ord(a)+value) % 26 + 97))
+        if(a != ' '):
+            res.append(chr( (ord(a)+value) % 26 + 97))
+        else:
+            res.append(' ')
     #We print the result, and add a second argument to print() in order to avoid the characters to be printed one by line. We want a line to equal a result.
     for c in res :
         print(c, end='')
