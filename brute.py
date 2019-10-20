@@ -1,5 +1,5 @@
 import sys
-from functions import incrementalNumber
+from dec import incrementalNumber
 
 if(len(sys.argv) != 3):
     sys.exit("Usage : python3 brute.py <charset> <ciphered_text>")
@@ -12,6 +12,7 @@ alphabet = sys.argv[1]
 ciphertext = sys.argv[2]
 
 if(alphabet == "dec"):
+    print('The 10 different combinations are : ')
     incrementalNumber(ciphertext)
 elif(alphabet == "alpha"):
     sys.exit()
