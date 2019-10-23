@@ -30,15 +30,15 @@ ciphertext = sys.argv[2]
 
 
 #This is the equivalent of a switch statement. This will allow us to choose the right function depending of the alphabet choosen.
-if(alphabet == "dec"):
+if alphabet == "dec" :
     print('The 10 different combinations are : ')
     incrementalNumber(ciphertext)
 
-elif(alphabet == "alpha"):
+elif alphabet == "alpha" :
     print('The 26 different combinations are : ')
     incrementalChar(ciphertext)
 
-elif(alphabet == "all"):
+elif alphabet == "all" :
     print('The 128 different combinations are : ')
     incrementalASCII(ciphertext)
     
