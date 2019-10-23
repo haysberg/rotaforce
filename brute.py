@@ -1,5 +1,7 @@
-#Please find the GitHub repository of this project at https://github.com/Couaque/rotaforce
-#Code by Téo Haÿs for the BN311 course
+"""
+Please find the GitHub repository of this project at https://github.com/Couaque/rotaforce
+Code by Téo Haÿs for the BN311 course
+"""
 
 #We import the necessary libraries.
 #sys is used to stop the execution of the program in case of wrong arguments.

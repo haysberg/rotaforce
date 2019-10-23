@@ -1,7 +1,15 @@
 #This file contains the functions used to process the decimal alphabet for rotaforce
 
-#This function is used to transform a string array (the one we get as an argument) into an integer array
+
 def stringToIntegerArray(inputString):
+    """This function is used to transform a string array (the one we get as an argument) into an integer array
+    
+    Arguments:
+        inputString {string} -- The string that we want to convert to an integer
+    
+    Returns:
+        integer -- The integer that we calculated from the string
+    """
     res = []
     #For each character in our input array, we get the character, transform it into an integer and remove 48, which is the offset of the numbers in the ASCII table.
     for i in range(len(inputString)) :
@@ -9,8 +17,13 @@ def stringToIntegerArray(inputString):
     return res
 
 
-#This function is used to display a given array, when we add a certain value to each member of the array
 def incrementIntArray(intArray, value):
+    """This function is used to display a given array, when we add a certain value to each member of the array
+    
+    Arguments:
+        intArray {array<integer>} -- The integer array that we will brute force
+        value {integer} -- The offset that we want our final result to have. It is added to the original number.
+    """
     res = []
 
     #For each numbers in the array given, we add the value provided in the second parameter. We use a modulo because we don't want any number to reach 10.
@@ -22,9 +35,13 @@ def incrementIntArray(intArray, value):
         print(i, end='')
 
 
-#This is the function called in our brute.py file, so it is used to call all the other functions.
-#This is why it is declared last, because it uses the functions declared previously.
 def incrementalNumber(numberString):
+    """This is the function called in our brute.py file, so it is used to call all the other functions.
+       This is why it is declared last, because it uses the functions declared previously.
+    
+    Arguments:
+        numberString {string} -- The input string containing only numbers that we get from the user.
+    """
     #We convert the array given by the user in an integer array
     integerArray = stringToIntegerArray(numberString)
 
