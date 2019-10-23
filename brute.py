@@ -1,5 +1,7 @@
-#Please find the GitHub repository of this project at https://github.com/Couaque/rotaforce
-#Code by Téo Haÿs for the BN311 course
+"""
+Please find the GitHub repository of this project at https://github.com/Couaque/rotaforce
+Code by Téo Haÿs for the BN311 course
+"""
 
 #We import the necessary libraries.
 #sys is used to stop the execution of the program in case of wrong arguments.
@@ -13,7 +15,7 @@ from ascii import incrementalASCII
 
 #If there is not exactly 3 arguments, we stop the program. The first argument is the name of the script, the others are the alphabet used and the cipheredtext
 if(len(sys.argv) != 3):
-    sys.exit("Usage : python3 brute.py <charset> <ciphered_text>")
+    raise ValueError('Usage : python3 brute.py <charset> <ciphered_text>')
 
 
 #If there is 3 arguments, we continue the execution. We display the arguments given, for troubleshooting purposes more than anything else
@@ -41,7 +43,7 @@ elif(alphabet == "all"):
     incrementalASCII(ciphertext)
     
 else:
-    sys.exit("Wrong alphabet given ! Alphabets include dec, alpha, all")
+    raise ValueError('Wrong alphabet, possible options include dec | alpha | all')
         
 
         
