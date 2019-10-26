@@ -4,7 +4,7 @@
 A small python utility to brute force rotational ciphers.
 Usage : python3 brute.py <charset> <ciphered_text>
 
-The latest release (0.1b - codename Sarah) is out ! Feel free to download it and try it on your machine !
+The latest release (0.2b - codename Jason) is out ! Feel free to download it and try it on your machine !
 This release has been tested with [bandit]([https://github.com/PyCQA/bandit](https://github.com/PyCQA/bandit)), and showed no Python vulnerability. Yay !
 
 ## Purpose
