@@ -32,11 +32,18 @@ ciphertext = sys.argv[2]
 #This is the equivalent of a switch statement. This will allow us to choose the right function depending of the alphabet choosen.
 if alphabet == "dec" :
     print('The 10 different combinations are : ')
-    incrementalNumber(ciphertext)
+    for i in range (1,10):
+        for char in incrementalNumber(ciphertext, i):
+            print(char, end='')
+        print('')
 
 elif alphabet == "alpha" :
     print('The 26 different combinations are : ')
-    incrementalChar(ciphertext)
+    #We add numbers to the array, from 0 to 9. The incrementIntArray will give us the results in the terminal.
+    for i in range(ord('a'), ord('z')):
+        for char in incrementalChar(ciphertext, i):
+            print(char, end='')
+        print('')
 
 elif alphabet == "all" :
     print('The 128 different combinations are : ')

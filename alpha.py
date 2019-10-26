@@ -12,26 +12,23 @@ def incrementCharArray(charArray, value):
     #It should go back to 97 instead, which is the ASCII code for the letter A.
     for a in charArray :
         if(a != ' '):
-            res.append(chr( (ord(a)+value) % 26 + 97))
+            res.append(chr((ord(a)+value - 97) % 26 + 97))
         else:
             res.append(' ')
-    #We print the result, and add a second argument to print() in order to avoid the characters to be printed one by line. We want a line to equal a result.
-    for c in res :
-        print(c, end='')
+
+    #We return the string that is obtained from the function to print it later.
+    return res
 
 
 
-def incrementalChar(charString):
+def incrementalChar(charString, offset):
     """This is the function called in our brute.py file, so it is used to call all the other functions.
        This is why it is declared last, because it uses the function declared previously.
     
     Arguments:
         charString {string} -- The string that we want to brute force.
+        offset {integer} -- The offset that we want to give to our potential unciphered text
     """
-    #We add numbers to the array, from 0 to 9. The incrementIntArray will give us the results in the terminal.
-    for i in range(ord('a'), ord('z')):
-        incrementCharArray(charString, i)
-        #When we have a new possible plaintext calculated, we return to the line for more visibility
-        print('')
+    return incrementCharArray(charString, offset)
 
         
