@@ -1,3 +1,5 @@
+#This is the unit_tests file, used to check that the functions that I coded are giving the expected results.
+
 import unittest
 import random
 
