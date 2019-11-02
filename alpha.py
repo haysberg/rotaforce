@@ -14,7 +14,7 @@ def incrementCharArray(charArray, value):
         if str.isalpha(a) :
             res.append(chr((ord(a)+value - 97) % 26 + 97))
         else:
-            res.append(' ')
+            res.append(a)
 
     #We return the string that is obtained from the function to print it later.
     return res
