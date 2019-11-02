@@ -12,12 +12,12 @@ def incrementString(String, value):
     #We use a modulo because we don't want any character ASCII code be greater than 128.
     #It should go back to 97 instead, which is the ASCII code for the letter A.
     for a in String :
-        res.append(chr( (ord(a)+value) % 128))
+        res.append(chr((ord(a)+value)%128))
 
 
     #We print the result, and add a second argument to print() in order to avoid the characters to be printed one by line. We want a line to equal a result.
     for c in res :
-        print(c, end='')
+       print(c, end='')
 
 
     #For this specific feature, I needed to print something to show the limits between the different results as there is some special characters that mess up with the lines.
