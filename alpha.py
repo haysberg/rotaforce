@@ -11,7 +11,7 @@ def incrementCharArray(charArray, value):
     #We use a modulo because we don't want any character ASCII code be greater than 122.
     #It should go back to 97 instead, which is the ASCII code for the letter A.
     for a in charArray :
-        if(a != ' '):
+        if str.isalpha(a) :
             res.append(chr((ord(a)+value - 97) % 26 + 97))
         else:
             res.append(' ')
